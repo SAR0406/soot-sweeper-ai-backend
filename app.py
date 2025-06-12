@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
-    api_key=os.getenv("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")  # Keep secret
+    api_key=os.getenv("NVIDIA_API_KEY")  # Keep secret
 )
 
 @app.route("/ai-suggestion", methods=["POST"])
