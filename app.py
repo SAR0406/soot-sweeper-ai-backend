@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
 from openai import OpenAI
+from flask_cors import CORS
 import os
 
 app = Flask(__name__)
+CORS(app)  # ✅ This line allows Flutter web to access it
 
 client = OpenAI(
     base_url="https://integrate.api.nvidia.com/v1",
